@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+}
+
+.page-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        "home home home home"
+        "nav nav nav nav"
+        "carousel carousel carousel form"
+        "feature feature feature feature"
+        "bodyquote01 bodyquote01 bodyquote01 bodyquote01"
+        "bodynav01 bodynav01 bodynav01 bodynav01"
+        "bodyquote02 bodyquote02 bodyquote02 bodyquote02"
+        "tier tier tier tier"
+        "bodyquote03 bodyquote03 bodyquote03 bodyquote03"
+        "bodyHeading bodyHeading bodyHeading bodyHeading"
+        "bodynav02 bodynav02 bodynav02 bodynav02"
+        "footer footer footer footer";
+        /* grid-gap: 5px; */
+
+}
+
+.home-link-wrapper {
+    grid-area: home;
+    padding: 10px;
+}
+
+.nav-wrapper {
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link-wrapper {
+    /* border: 1px solid purple; */
+    padding: 0px 10px 0px 10px ;
+}
+
+.nav-link-wrapper > a {
+    display: block;
+    text-decoration: none;
+    font-size: 16pt;
+    height: 40px;
+    line-height: 40px;
+    color: gray;
+    transition: all 0.3s ease-out;
+    /* margin: 15px; */
+}
+
+.nav-link-wrapper > a:hover {
+    color:papayawhip;
+    background-color: palevioletred;
+    border-bottom: 2px black;
+    transition: all 0.3s ease-in;
+}
+
+
+
+
+
+
+.carousel-container {
+    grid-area: carousel;
+    position: relative;
+    margin: 0;
+}
+
+.carousel-image {
+    display: none;
+}
+
+.carousel-image > img {
+    width: 100%;
+    height: 500px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 20px;
+    width: auto;
+    top: 50%;
+    background-color: black;
+    opacity: 20%;
+    color: cornsilk;
+    transition: all 0.3s ease-out;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    display: block;
+    color: cornsilk;
+    background-color: black;
+    transition: all 0.3s ease-in;
+    opacity: 70%;
+}
+
+.carousel-quote {
+    position: absolute;
+    bottom: 5%;
+    padding: 10px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16pt;
+    border-radius: 2px;
+    color: lightgoldenrodyellow;
+    background-color: lightslategray;
+    opacity: 80%;
+    text-align: center;
+}
+
+.form-container {
+    grid-area: form;
+    border: 1px solid lightcoral;
+}
+
+
+.feature-container {
+    grid-area: feature;
+    margin: 10px 50px 10px 50px;       /*top right bottom left*/
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid palevioletred;
+}
+
+.feature {
+    margin: 10px 50px 10px 50px;
+    padding: 20px;
+    border: 1px solid purple;
+    height: 60px;
+    width: 200px;
+}
+
+
+
+
+.tiers-container {
+    grid-area: tier;
+    display: flex;
+    border: 1px solid palevioletred;
+    justify-content: center;
+}
+
+.tiers {
+    margin: 50px 50px 50px 50px;
+    border-radius: 50%;
+    height: 125px;
+    width: 125px;
+    border: 1px solid purple;
+    text-align: center;
+}
+
+/* .tiers > p {
+    text-align: start;
+    line-height: 125px;
+} */
+
+.body-nav01 {
+    margin: 50px;
+    grid-area: bodynav01;
+    border: 1px solid palevioletred;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.body-nav01 > .body-navItem-wrapper {
+    margin: 10px 30px 10px 30px ;
+    border: 1px solid purple;
+    padding: 10px;
+    width: 120px;
+}
+
+.body-nav02 {
+    margin: 30px;
+    grid-area: bodynav02;
+    border: 1px solid palevioletred;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.body-nav02 > .body-navItem-wrapper {
+    margin: 10px 20px 10px 20px ;
+    border: 1px solid purple;
+    padding: 10px;
+    width: 150px;
+}
+
+.body-heading {
+    grid-area: bodyHeading;
+}
+
+.body-quote-wrapper01 {
+    grid-area: bodyquote01;
+}
+
+.body-quote-wrapper02 {
+    grid-area: bodyquote02;
+}
+
+.body-quote-wrapper03 {
+    grid-area: bodyquote03;
+}
+
+.footer-container {
+    grid-area: footer;
+    height: 200px;
+    background-color: gray;
+    text-align: center;
+    line-height: 200px;
+    color: blanchedalmond;
+}
